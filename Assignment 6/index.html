@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6: Interactive Image Toggle</title>
+    <style>
+        /* Keeping CSS simple so the JS logic stands out */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            padding-top: 50px; 
+            background-color: #f4f4f9;
+        }
+        
+        #myImage { 
+            width: 300px; 
+            margin: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        button { 
+            padding: 12px 25px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 5px;
+            background-color: #4a90e2;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        button:hover { background-color: #357abd; }
+        
+        /* This class makes elements disappear from the layout */
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 6: Image Toggle</h1>
+    <p>Click the buttons below to control the image visibility.</p>
+
+    <img id="myImage" src="https://www.mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="My Project Logo" class="hidden">
+
+    <div style="margin-top: 20px;">
+        <button id="showBtn" onclick="showImage()">Show Image</button>
+        <button id="hideBtn" class="hidden" onclick="hideImage()">Hide Image</button>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
