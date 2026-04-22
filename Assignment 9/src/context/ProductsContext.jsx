@@ -114,7 +114,11 @@ export function ProductsProvider({ children }) {
 
   const deleteProduct = async (id) => {
     setError('')
-    await request(`${BASE_URL}/${id}`, { method: 'DELETE' })
+    try {
+      await request(`${BASE_URL}/${id}`, { method: 'DELETE' })
+    } catch {
+      // Ignore API errors for local products or mock API limitations
+    }
 
     setProducts((prev) => prev.filter((product) => product.id !== Number(id)))
   }
