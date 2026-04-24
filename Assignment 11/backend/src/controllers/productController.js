@@ -1,0 +1,278 @@
+// 1. Static Data Array
+let products = [
+    {
+        id: 1,
+        name: "Classic Cotton T-Shirt",
+        price: 24.99,
+        category: "fashion",
+        description: "Soft 100% cotton crew-neck t-shirt designed for everyday comfort and breathable wear.",
+        brand: "UrbanThread",
+        rating: 4.6,
+        stock: 120,
+        thumbnail: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 2,
+        name: "Wireless Noise-Cancelling Headphones",
+        price: 149.99,
+        category: "electronics",
+        description: "Over-ear Bluetooth headphones with active noise cancellation, deep bass, and 30-hour battery life.",
+        brand: "SoundPeak",
+        rating: 4.8,
+        stock: 75,
+        thumbnail: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 3,
+        name: "Smart Stainless Coffee Maker",
+        price: 89.5,
+        category: "home-appliances",
+        description: "Programmable drip coffee maker with thermal carafe, auto-brew timer, and keep-warm mode.",
+        brand: "BrewMaster",
+        rating: 4.4,
+        stock: 48,
+        thumbnail: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 4,
+        name: "Eco-Friendly Yoga Mat",
+        price: 39.0,
+        category: "sports",
+        description: "Non-slip yoga mat made from eco-friendly materials with extra cushioning for joint support.",
+        brand: "ZenFlex",
+        rating: 4.5,
+        stock: 90,
+        thumbnail: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 5,
+        name: "Travel Laptop Backpack",
+        price: 64.0,
+        category: "accessories",
+        description: "Water-resistant 25L backpack with padded laptop sleeve, anti-theft pocket, and USB charging port.",
+        brand: "TrailNova",
+        rating: 4.7,
+        stock: 60,
+        thumbnail: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 6,
+        name: "Running Shoes Pro",
+        price: 95.0,
+        category: "footwear",
+        description: "Lightweight running shoes with shock-absorbing sole and breathable mesh upper.",
+        brand: "StrideMax",
+        rating: 4.5,
+        stock: 80,
+        thumbnail: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 7,
+        name: "Ceramic Dinner Plate Set",
+        price: 49.99,
+        category: "kitchen",
+        description: "Set of 6 durable ceramic dinner plates with a minimalist matte finish.",
+        brand: "HomeCraft",
+        rating: 4.3,
+        stock: 55,
+        thumbnail: "https://images.unsplash.com/photo-1603190287605-e6ade32fa852?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 8,
+        name: "Bluetooth Smartwatch",
+        price: 129.99,
+        category: "wearables",
+        description: "Smartwatch with heart-rate tracking, sleep monitoring, and message notifications.",
+        brand: "PulseTime",
+        rating: 4.4,
+        stock: 70,
+        thumbnail: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 9,
+        name: "Office Ergonomic Chair",
+        price: 219.0,
+        category: "furniture",
+        description: "Adjustable ergonomic office chair with lumbar support and breathable backrest.",
+        brand: "SeatWell",
+        rating: 4.6,
+        stock: 34,
+        thumbnail: "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 10,
+        name: "Hydrating Face Moisturizer",
+        price: 19.5,
+        category: "beauty",
+        description: "Daily moisturizer enriched with hyaluronic acid for soft and hydrated skin.",
+        brand: "GlowNest",
+        rating: 4.2,
+        stock: 140,
+        thumbnail: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 11,
+        name: "Mechanical Keyboard RGB",
+        price: 79.99,
+        category: "computer-accessories",
+        description: "Mechanical keyboard with tactile switches, RGB backlight, and aluminum frame.",
+        brand: "KeyForge",
+        rating: 4.7,
+        stock: 68,
+        thumbnail: "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 12,
+        name: "Portable Blender Bottle",
+        price: 34.0,
+        category: "health",
+        description: "USB rechargeable portable blender for smoothies and shakes on the go.",
+        brand: "BlendGo",
+        rating: 4.1,
+        stock: 95,
+        thumbnail: "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 13,
+        name: "Kids Learning Toy Set",
+        price: 29.99,
+        category: "toys",
+        description: "Creative educational toy set that helps children learn shapes and colors.",
+        brand: "BrightMinds",
+        rating: 4.5,
+        stock: 110,
+        thumbnail: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 14,
+        name: "Men Denim Jacket",
+        price: 59.99,
+        category: "fashion",
+        description: "Classic fit denim jacket with button front and two chest pockets.",
+        brand: "DenimWorks",
+        rating: 4.4,
+        stock: 76,
+        thumbnail: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 15,
+        name: "4K Action Camera",
+        price: 199.99,
+        category: "cameras",
+        description: "Compact action camera with 4K video, waterproof case, and image stabilization.",
+        brand: "AdventureCam",
+        rating: 4.6,
+        stock: 41,
+        thumbnail: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 16,
+        name: "Hardcover Notebook Set",
+        price: 17.99,
+        category: "stationery",
+        description: "Set of 3 premium hardcover notebooks for notes, journaling, and planning.",
+        brand: "NoteCraft",
+        rating: 4.3,
+        stock: 160,
+        thumbnail: "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 17,
+        name: "Indoor Plant Pot Bundle",
+        price: 42.0,
+        category: "garden",
+        description: "Decorative ceramic plant pots bundle suitable for indoor herbs and succulents.",
+        brand: "GreenHaven",
+        rating: 4.2,
+        stock: 52,
+        thumbnail: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 18,
+        name: "Car Phone Mount",
+        price: 15.99,
+        category: "automotive",
+        description: "360-degree rotating car phone mount with strong dashboard suction cup.",
+        brand: "DriveMate",
+        rating: 4.1,
+        stock: 130,
+        thumbnail: "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 19,
+        name: "Travel Cabin Suitcase",
+        price: 109.99,
+        category: "travel",
+        description: "Lightweight hard-shell cabin suitcase with spinner wheels and TSA lock.",
+        brand: "SkyVoyage",
+        rating: 4.5,
+        stock: 47,
+        thumbnail: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+        id: 20,
+        name: "Acoustic Guitar Starter Kit",
+        price: 189.0,
+        category: "music",
+        description: "Full-size acoustic guitar starter kit including bag, tuner, strap, and picks.",
+        brand: "ChordLine",
+        rating: 4.6,
+        stock: 38,
+        thumbnail: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=80"
+    },
+];
+
+// 2. Logic for GET (All)
+exports.getAllProducts = (req, res) => {
+    res.json(products);
+};
+
+// 3. Logic for GET (Single)
+exports.getProductById = (req, res) => {
+    const product = products.find(p => p.id === parseInt(req.params.id));
+    if (!product) return res.status(404).json({ message: "Product not found" });
+    res.json(product);
+};
+
+// 4. Logic for POST (Create)
+exports.createProduct = (req, res) => {
+    const nextId = products.length ? Math.max(...products.map((item) => item.id)) + 1 : 1;
+    const newProduct = {
+        id: nextId,
+        name: req.body.name,
+        price: req.body.price,
+        category: req.body.category || "",
+        description: req.body.description || "",
+        brand: req.body.brand || "",
+        rating: req.body.rating ?? null,
+        stock: req.body.stock ?? null,
+        thumbnail: req.body.thumbnail || ""
+    };
+    products.push(newProduct);
+    res.status(201).json(newProduct);
+};
+
+// 5. Logic for PUT (Update)
+exports.updateProduct = (req, res) => {
+    const product = products.find(p => p.id === parseInt(req.params.id));
+    if (!product) return res.status(404).json({ message: "Product not found" });
+    
+    product.name = req.body.name ?? product.name;
+    product.price = req.body.price ?? product.price;
+    product.category = req.body.category ?? product.category;
+    product.description = req.body.description ?? product.description;
+    product.brand = req.body.brand ?? product.brand;
+    product.rating = req.body.rating ?? product.rating;
+    product.stock = req.body.stock ?? product.stock;
+    product.thumbnail = req.body.thumbnail ?? product.thumbnail;
+    res.json(product);
+};
+
+// 6. Logic for DELETE
+exports.deleteProduct = (req, res) => {
+    const index = products.findIndex(p => p.id === parseInt(req.params.id));
+    if (index === -1) return res.status(404).json({ message: "Product not found" });
+    
+    products.splice(index, 1);
+    res.json({ message: "Product deleted successfully" });
+};
