@@ -1,0 +1,19 @@
+{
+  "name": "assignment-12-products-api",
+  "version": "1.0.0",
+  "description": "Simple Product CRUD API using Express and MongoDB",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node src/app.js",
+    "build": "cd frontend && npm install && npm run build",
+    "postinstall": "cd frontend && npm install"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.2.1"
+  }
+}
