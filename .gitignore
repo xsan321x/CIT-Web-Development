@@ -1,1 +1,3 @@
-.embedded-repo-backups/
+node_modules
+.env
+*.log
